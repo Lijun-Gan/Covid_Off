@@ -1,0 +1,57 @@
+#y-axis{
+    font-size: 20px;
+}
+#x-axis{
+    font-size: 15px;
+}
+
+
+
+
+.bar{
+    fill: #056e05;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-out;
+    height: 21px;
+}
+
+.bar:hover{
+    opacity: 1;
+}
+
+/* .accent{
+
+    fill: #CE1B18;
+} */
+
+#tooltipR{
+
+    position: absolute;
+    pointer-events: none;
+    background: white;
+    font-size: 13px;
+    border-top: 0.5rem solid black;
+}
+
+.title {
+    font-size: 1em;
+    margin: 10px;
+}
+
+.description{
+    margin: 10px;
+}
+
+.rank-container{
+    height: 420px;
+    overflow-y: scroll;
+    padding-right: 10px
+}
+
+.title{
+    color: black;
+}
+
+.rank-title {
+    text-align: center;
+}

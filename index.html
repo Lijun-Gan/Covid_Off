@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./dist/01-main.css" />
+    <link rel="stylesheet" href="./dist/02-case.css" />
+    <link rel="stylesheet" href="./dist/03-rank.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <title>Covid-Off</title>
+
+  </head>
+
+  <body>
+    <div class="title-container">
+      <img class="app-logo"  src="dist/images/logo.png"> 
+      <img class="dashboard-title"  src="dist/images/dashboard.png"> 
+      <!-- <div class="dashboard-title">
+        <p class="map-title">Coronavirus Dashboard</p>
+      </div> -->
+
+      <a class="github-link" href="https://github.com/Lijun-Gan"><img class="github-logo" src="dist/images/github.png"></a>
+      <a href="https://www.linkedin.com/in/lijun-gan/"><img class="linkedin-logo"  src="dist/images/linkedin.png"> </a> 
+      <a href="https://angel.co/u/lijun-gan"><img class="angle-logo"  src="dist/images/angle.png"> </a> 
+     
+      <div class="box">
+        <a class="button" href="#popup1">about</a>
+      </div>
+      
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Coronavirus Dashboard</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            <p class="popUp-purpose">Purpose: </p>
+            <span class="reson">Covid-19 like all the coronavirus come before it, presents great challenge for the mankind. One of the greatest challenges is not knowing what we're facing and how the virus is responding to our treatments. Therefore, it's the purpose of this website to provide visual data on number of cases, death toll, and vaccination. </span>
+            <p class="popUp-purpose">Resources: </p>
+            <p class="popUp-links"><span class="dot"></span> Vaccination data: <a href="https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json">link</a></p>
+            <p class="popUp-links"><span class="dot"></span> Case data: <a href="https://corona-api.com/countries?include=timeline">link</a></p>
+          </div>
+    
+
+
+          <a href="https://github.com/Lijun-Gan" class="no-underscore">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          |
+          <a href="https://www.linkedin.com/in/lijun-gan/" class="no-underscore">
+              <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          |
+          <a href="https://angel.co/u/lijun-gan" class="no-underscore">
+            <i class="fab fa-angellist"></i> AngelList
+        </a>
+
+        </div>
+      </div>
+    
+    </div>
+
+    <div class="map-container">
+
+      <div class="container-left">
+        <h3 class="rank-title">Total Vaccination Ranking</h3>
+        <div class="rank-container">
+          <div class="container"></div> 
+
+        </div>
+      </div>
+
+      <div class="map">
+        <h1>Global Vaccination Map</h1>
+        <svg id="my_dataviz" width="800" height="450" ></svg>
+        <div id="tooltip">
+          Country: <span id="name" class="info"></span><br> 
+          Total vaccinations: <span id="total_vaccinations" class="info"></span><br>
+          People vaccinated: <span id="people_vaccinated" class="info"></span><br> 
+          People fully vaccinated: <span id="people_fully_vaccinated" class="info"></span><br>  
+          Daily vaccinations: <span id="daily_vaccinations" class="info"></span><br> 
+          Updated: <span id="update" class="info"></span><br> 
+        </div>
+      </div>
+    
+  </div>
+  
+<div class="lower-container">
+  <div class="chart" >
+    <h3>Cases Timeline</h3>
+    <canvas id="axes_line_chart" width="250" ></canvas>
+  </div>
+
+  <!-- start -->
+<div class="container-right">
+
+  <div class="stats">
+    <div class="latest-report">
+      <div class="country">
+        <div class="name">Loading...</div>
+        <div class="change-country">change</div>
+        <div class="search-country hide">
+          <div class="search-box">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search Country..."
+              autocomplete="off"
+            />
+            <img class="search-close" src="dist/images/close.svg" alt="" />
+          </div>
+  
+          <div class="country-list">
+    
+          </div>
+        </div>
+      </div>
+      <!-- <div class="total-vaccinations">
+        <div class="title">Total Vaccinations</div>
+        <div class="value">0</div>
+        <div class="new-value">+0</div>
+      </div> -->
+      <div class="total-cases">
+        <div class="title">Total Cases</div>
+        <div class="value">0</div>
+        <div class="new-value">+0</div>
+      </div>
+      <div class="recovered">
+        <div class="title">Recovered</div>
+        <div class="value">0</div>
+        <div class="new-value">+0</div>
+      </div>
+      <div class="deaths">
+        <div class="title">Deaths</div>
+        <div class="value">0</div>
+        <div class="new-value">+0</div>
+      </div>
+    </div>
+  
+  </div>
+  </div>
+  <!-- end -->
+
+</div>
+  
+    <footer>
+      <div class="footer-container">
+        <div class="copyright">
+          <p>Copyright © 2021 Covid-Off</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="./dist/main.js"></script>
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <script src="./dist/rank.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"></script>
+    <script src="./dist/countries.js"></script>
+    <script src="./dist/cases.js"></script>
+  </body>
+</html>
