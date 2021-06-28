@@ -1,6 +1,6 @@
 # Covid-off
 
-[Link to live site](https://lijun-gan.github.io/Covid-off/)
+[Link to live site](https://lijun-gan.github.io/Covid_Off/)
 
 ## Overview:
   help users to track covid-19 vaccination and cases.
