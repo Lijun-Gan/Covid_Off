@@ -133,7 +133,7 @@ function ready(error, topo, result) {
   // 	return d[0] / 1000000 + " m - " + d[1] / 1000000 + " m";
   // });
 
-  legend.append("text").attr("x", 15).attr("y", 280).text("Total vaccinations per hundred");
+  legend.append("text").attr("x", 15).attr("y", 205).text("Total vaccinations per hundred");
 } // Zoom functionality
 
 
