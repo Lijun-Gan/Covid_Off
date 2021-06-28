@@ -9,8 +9,10 @@ body {
 
 h1 {
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
+  margin-top: -3px;
+  margin-bottom: 10px;
 }
 
 #legend {
@@ -19,7 +21,8 @@ h1 {
 }
 
 .map {
-  padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   background-color: #FFFFFF;
   border: 1px solid #4D8DC4;
   box-shadow: 1px 1px 15px #000000;
@@ -77,7 +80,7 @@ h1 {
 .map-container{
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 20px;
   min-width: 1240px;
 }
 
@@ -254,4 +257,10 @@ h1 {
 
 .no-underscore{
   text-decoration: none;
+}
+
+.hover-map{
+  font-size: 8px;
+    color: grey;
+    margin-left: 463px;
 }

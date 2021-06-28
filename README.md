@@ -3,10 +3,10 @@
 [Link to live site](https://lijun-gan.github.io/Covid-off/)
 
 ## Overview:
-  help users to track covid-19 vaccination and cases
+  help users to track covid-19 vaccination and cases.
 
 ## Functionlity:
-  user can track live data for coivd-19 cases
+  user can track live data for coivd-19 vaccination and cases.
 
 ## Architecture and Technology:
   CSS, HTML, JAVASCRIPT, D3
@@ -19,9 +19,4 @@
 
 ![Snapshot](dashboard.gif)
 
-## Timeline:
-
-1. US covid cases & vaccine testing --- 4/5 
-2. states covid cases map --- 4/6
-3. covid cases and vaccine testing for different states --- 4/7
 

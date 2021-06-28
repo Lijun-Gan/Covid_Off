@@ -1,6 +1,6 @@
 .container-right{
   min-width: 220px;
-  height: 485px;
+  height: 457px;
   margin-right: 35px;
   background-color: white;
   border: 1px solid #4D8DC4;
@@ -21,8 +21,8 @@
 .total-vaccinations,
 .recovered,
 .deaths{
-      /* height: 100px; */
-      height: 110px;
+      height: 100px;
+      /* height: 110px; */
   }
 
 .name{
@@ -36,7 +36,9 @@
   cursor: pointer;
   padding-top: 5px;
   color: #0dc30d;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-size: 12px;
+
 }
 
 .title{
@@ -122,7 +124,7 @@
   /* width: 400px; */
   /* height: 300px; */
   width: 185px;
-  height: 360px;
+  height: 328px;
   /* border-bottom-right-radius: 30px; */
 
   background-color: black;
@@ -191,21 +193,20 @@ footer{
 
 /* -------- CHART -------- */
 .chart{
-  width: 920px;
+  width: 882px;
   margin-left: 35px;
   /* height: 44vh; */
-  max-height: 424px;
-
+  /* max-height: 424px; */
+  max-height: 408px;
   background-color: white;
   border: 1px solid #4D8DC4;
   box-shadow: 1px 1px 15px #000000;
   border-radius: 30px;
-
   /* margin: 30px auto; */
   /* padding: 20px 15px; */
   padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 75px;
+  padding-right: 7px;
+  padding-bottom: 62px;
 }
 
 .timeline{
@@ -218,7 +219,7 @@ footer{
 .lower-container{
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 15px;
   min-width: 1240px;
 
 }
@@ -226,8 +227,8 @@ footer{
 /* left */
 
 .container-left{
-  min-width: 350px;
-  height: 508px;
+  min-width: 344px;
+  height: 445px;
   margin-right: 35px;
   background-color: white;
   border: 1px solid #4D8DC4;
@@ -239,5 +240,18 @@ footer{
 
 h3{
   text-align: center;
+  
+}
 
+.cases-timeline{
+  text-align: center;
+  margin: 12px 0px;
+  margin-bottom: 0px;
+}
+
+.hover-case{
+  font-size: 8px;
+  color: grey;
+  margin-left: 697px;
+  margin-top: 0px;
 }

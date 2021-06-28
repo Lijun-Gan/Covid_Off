@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="./dist/03-rank.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
+    <link rel="icon" href="dist/images/favicon.png">
+
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
     <title>Covid-Off</title>
 
   </head>
@@ -68,6 +71,7 @@
 
       <div class="container-left">
         <h3 class="rank-title">Total Vaccination Ranking</h3>
+        <p class="hover-ranking">Note: hover over the green progress bar to see the detail.</p>
         <div class="rank-container">
           <div class="container"></div> 
 
@@ -76,7 +80,9 @@
 
       <div class="map">
         <h1>Global Vaccination Map</h1>
-        <svg id="my_dataviz" width="800" height="450" ></svg>
+        <p class="hover-map">Note: hover over the coutry in the map to see the detail and click to zoom in/out.</p>
+  
+        <svg id="my_dataviz" width="800" height="380" ></svg>
         <div id="tooltip">
           Country: <span id="name" class="info"></span><br> 
           Total vaccinations: <span id="total_vaccinations" class="info"></span><br>
@@ -91,7 +97,9 @@
   
 <div class="lower-container">
   <div class="chart" >
-    <h3>Cases Timeline</h3>
+    <h3 class="cases-timeline">Cases Timeline</h3>
+    <p class="hover-case">Note: hover over the line to see the detail.</p>
+
     <canvas id="axes_line_chart" width="250" ></canvas>
   </div>
 
@@ -102,7 +110,7 @@
     <div class="latest-report">
       <div class="country">
         <div class="name">Loading...</div>
-        <div class="change-country">change</div>
+        <div class="change-country">Click here to select a country</div>
         <div class="search-country hide">
           <div class="search-box">
             <input
