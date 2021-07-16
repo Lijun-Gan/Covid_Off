@@ -187,10 +187,10 @@ h1 {
 
 .popup {
   margin: 70px auto;
-  padding: 20px;
+  padding: 40px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 38%;
   position: relative;
   transition: all 5s ease-in-out;
 }
@@ -257,6 +257,12 @@ h1 {
 
 .no-underscore{
   text-decoration: none;
+}
+
+.portfolio-about-logo{
+  width: 14px;
+    height: 14px;
+    margin-right: 2px;
 }
 
 .hover-map{
